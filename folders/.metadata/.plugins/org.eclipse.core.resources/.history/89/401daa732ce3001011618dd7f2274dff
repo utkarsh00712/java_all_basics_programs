@@ -1,0 +1,5 @@
+package com.kodnest.sixthhibernate;
+
+public class Author {
+
+}

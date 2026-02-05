@@ -1,0 +1,17 @@
+package method;
+
+public class Float {
+	public static void main(String[] args) {
+		float quotent = getQuotent();
+		System.out.println(quotent);
+			
+			
+		}
+	
+
+	private static float getQuotent() {
+		
+		return 3.0f;
+	}
+
+}

@@ -1,0 +1,23 @@
+
+public class Variable {
+	public static void main(String[] args) {
+		var alarm = true;
+		var bath = true;
+		var breakfast = true;
+		var learn = true;
+		var homework = true;
+		var hungry = true;
+		var sleep = true;	
+		if(alarm);{
+		System.out.println("Wake up");
+		}
+		else {
+			}
+
+			System.out.println("Not Waking up");
+		}
+			
+		}
+	
+
+

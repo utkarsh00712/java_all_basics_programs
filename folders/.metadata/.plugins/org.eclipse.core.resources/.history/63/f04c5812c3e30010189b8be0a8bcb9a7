@@ -1,0 +1,5 @@
+package com.kodnest.seventhhibernate;
+
+public class Course {
+
+}

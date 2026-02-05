@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\ninthhibernate\src\main\java\com\kodnest\ninthhibernate\App.java"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\fifthHibernate"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\fourthHibernate"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\FirstMavenPoject2"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\ThirdHibernate\src\main\java\com\kodnest\ThirdHibernate\App.java"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\java class\FirstHibernate\pom.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.kodnest.tenthhibernate"/>
+			<item value="com.kodnest.ninthhibernate"/>
+			<item value="com.kodnest.eigthhibernate"/>
+			<item value="com.kodnest.seventhhibernate"/>
+			<item value="com.kodnest.SeventhProject"/>
+			<item value="com.kodnest.sixthhibernate"/>
+			<item value="com.kodnest.fifthHibernate"/>
+			<item value="com.kodnest.ems"/>
+			<item value="com.kodnest.fourthHibernate"/>
+			<item value="com.kodnest.fourthProject"/>
+			<item value="com.kodnest.ThirdHibernate"/>
+			<item value="com.kodnest.secondHibernate"/>
+			<item value="com.kodnest.FirstHibernate"/>
+			<item value="com.kodnest.FirstMavenPoject2"/>
+			<item value="com.kodnest.FirstMavenProject"/>
+		</list>
+		<list key="groupId">
+			<item value="com.kodnest"/>
+		</list>
+		<list key="artifactId">
+			<item value="tenthhibernate"/>
+			<item value="ninthhibernate"/>
+			<item value="eigthhibernate"/>
+			<item value="seventhhibernate"/>
+			<item value="SeventhProject"/>
+			<item value="sixthhibernate"/>
+			<item value="fifthHibernate"/>
+			<item value="ems"/>
+			<item value="fourthHibernate"/>
+			<item value="fourthProject"/>
+			<item value="ThirdHibernate"/>
+			<item value="secondHibernate"/>
+			<item value="FirstHibernate"/>
+			<item value="FirstMavenPoject2"/>
+			<item value="FirstMavenProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\EighthSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\SeventhSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\SixthSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\FifthSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\FourthSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\ThirdSpring"/>
+			<item value="C:\Users\hp\OneDrive\Desktop\juneSpring\secondSpring"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

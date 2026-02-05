@@ -1,0 +1,81 @@
+package com.kodnest.fifthHibernate;
+
+import java.util.Objects;
+
+public class Address {
+int id;
+String city;
+String Street;
+String state;
+String zipcode;
+public Address() {
+	super();
+}
+public Address(int id, String city, String street, String state, String zipcode) {
+	super();
+	this.id = id;
+	this.city = city;
+	Street = street;
+	this.state = state;
+	this.zipcode = zipcode;
+}
+public Address(String city, String street, String state, String zipcode) {
+	super();
+	this.city = city;
+	Street = street;
+	this.state = state;
+	this.zipcode = zipcode;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getStreet() {
+	return Street;
+}
+public void setStreet(String street) {
+	Street = street;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
+}
+public String getZipcode() {
+	return zipcode;
+}
+public void setZipcode(String zipcode) {
+	this.zipcode = zipcode;
+}
+@Override
+public int hashCode() {
+	return Objects.hash(Street, city, id, state, zipcode);
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Address other = (Address) obj;
+	return Objects.equals(Street, other.Street) && Objects.equals(city, other.city) && id == other.id
+			&& Objects.equals(state, other.state) && Objects.equals(zipcode, other.zipcode);
+}
+@Override
+public String toString() {
+	return "Address [id=" + id + ", city=" + city + ", Street=" + Street + ", state=" + state + ", zipcode=" + zipcode
+			+ "]";
+}
+
+}

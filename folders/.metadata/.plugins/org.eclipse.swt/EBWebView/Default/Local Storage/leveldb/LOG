@@ -1,0 +1,4 @@
+2026/01/03-18:42:53.595 6a80 Reusing MANIFEST C:\Users\hp\OneDrive\Desktop\java class\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2026/01/03-18:42:53.622 6a80 Recovering log #3
+2026/01/03-18:42:53.628 6a80 (ignoring error) C:\Users\hp\OneDrive\Desktop\java class\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log: dropping 32768 bytes; IO error: C:\Users\hp\OneDrive\Desktop\java class\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log: FILE_ERROR_FAILED (ChromeMethodBFE: 0::SequentialFileRead::1)
+2026/01/03-18:42:53.639 6a80 Reusing old log C:\Users\hp\OneDrive\Desktop\java class\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 

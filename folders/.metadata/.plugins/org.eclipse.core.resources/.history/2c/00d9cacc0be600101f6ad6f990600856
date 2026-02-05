@@ -1,0 +1,54 @@
+package com.kodnest.SixthSpring;
+
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Department {
+int did;
+int dname;
+@Autowired
+public Department(@Value("${dept.did}") int did,@Value("${dept.dname}") int dname) {
+	super();
+	this.did = did;
+	this.dname = dname;
+}
+@Override
+public String toString() {
+	return "Department [did=" + did + ", dname=" + dname + "]";
+}
+@Override
+public int hashCode() {
+	return Objects.hash(did, dname);
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Department other = (Department) obj;
+	return did == other.did && dname == other.dname;
+}
+public int getDid() {
+	return did;
+}
+public void setDid(int did) {
+	this.did = did;
+}
+public int getDname() {
+	return dname;
+}
+public void setDname(int dname) {
+	this.dname = dname;
+}
+public Department() {
+	super();
+}
+
+}

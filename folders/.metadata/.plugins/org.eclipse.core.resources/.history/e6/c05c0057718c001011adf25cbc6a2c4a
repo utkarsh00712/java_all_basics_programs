@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ArrayApp {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	Array array = new Array(sc.nextInt());
+	array.insert(500, 0);
+	array.display();
+    array.insertAll(50);
+    array.display();
+    System.out.println(array.search(50,2));
+}
+}

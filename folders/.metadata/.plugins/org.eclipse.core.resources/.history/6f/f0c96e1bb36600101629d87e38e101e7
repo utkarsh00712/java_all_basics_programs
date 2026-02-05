@@ -1,0 +1,17 @@
+package Inheritance;
+
+public class Bird {
+	String name;
+	int age;
+	
+	void eat() {
+		System.out.println(name +"Bird is eating" + age);
+	}
+	void sleep() {
+		System.out.println(name + "Bird is Sleeping" + age);
+	}
+
+	void fly() {
+		System.out.println(name + "bird is flying" + age);
+	}
+}

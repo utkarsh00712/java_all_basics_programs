@@ -1,0 +1,21 @@
+
+public class Main {
+public static void main(String[] args) {
+	
+	PhysicsTeacher pt = new PhysicsTeacher();
+	ChemistryTeacher ct = new ChemistryTeacher();
+	BioTeacher bt = new BioTeacher();
+	
+	pt.name = "Ram";
+	ct.name = "Ramesh";
+	bt.name = "Ramendra";
+	
+	pt.teach();
+	pt.doLawsExp();
+	ct.teach();
+	ct.doChemicalExp();
+	bt.teach();
+	bt.doDisectionExp();
+	
+}
+}

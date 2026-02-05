@@ -1,0 +1,4 @@
+
+public class BioTeacher extends Teacher {
+
+}

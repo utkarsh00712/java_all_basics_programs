@@ -1,0 +1,43 @@
+name: Daily Folder Upload
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # 10:30 AM IST (05:00 UTC)
+  workflow_dispatch:
+
+# ✅ REQUIRED to allow git push
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload one folder per day
+        run: |
+          echo "Checking folders..."
+
+          FOLDER=$(find folders -mindepth 1 -maxdepth 1 -type d | sort | head -n 1 | xargs basename)
+
+          if [ -z "$FOLDER" ]; then
+            echo "✅ No folders left"
+            exit 0
+          fi
+
+          echo "Uploading folder: $FOLDER"
+
+          mkdir -p uploaded
+          mv "folders/$FOLDER" "uploaded/$FOLDER"
+
+          git config user.name "Utkarsh Chaturvedi"
+          git config user.email "chaturvediutkarsh776@gmail.com"
+
+          git add .
+          git commit -m "Daily folder upload: $FOLDER"
+          git push

@@ -1,0 +1,42 @@
+package com.kodnest.sixthhibernate;
+
+public class Book {
+
+	int id;
+	
+	String name;
+	
+	int price;
+	
+	int noOfPages;
+	
+	Author author;
+
+	public Book(String name, int price, int noOfPages) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.noOfPages = noOfPages;
+	}
+
+	public Book(String name, int price, int noOfPages, Author author) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.noOfPages = noOfPages;
+		this.author = author;
+	}
+
+	public Book(int id, String name, int price, int noOfPages, Author author) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.noOfPages = noOfPages;
+		this.author = author;
+	}
+
+	public Book() {
+		super();
+	}
+}

@@ -1,0 +1,15 @@
+package method;
+
+public class Float {
+	public static void main(String[] args) {
+		float m = Float.getQuotent();
+		System.out.println(m);	
+		}
+	private static float getQuotent() {
+	float a=30.0f;
+	float b = 6.0f;
+    float res = a/b;
+		return(res);
+	}
+
+}

@@ -1,0 +1,34 @@
+package StreamCreation;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class StudentDetails {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int kannada = sc.nextInt();
+	int hindi = sc.nextInt();
+	int english = sc.nextInt();
+	int math = sc.nextInt();
+	int science = sc.nextInt();
+	int social = sc.nextInt();
+	
+	try {
+	String path = "C:\\Kodnest\\StudentPercentage.txt";
+	
+	FileWriter fw = new FileWriter(path);
+	BufferedWriter bw = new BufferedWriter(fw);
+	
+	bw.write("Kannada: " + kannada);
+	bw.write("Hindi: " + hindi);
+	bw.write("English: " + english);
+	bw.write("math: " + math);
+	bw.write("Science: " + science);
+	bw.write("social: " + social);
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}
+}

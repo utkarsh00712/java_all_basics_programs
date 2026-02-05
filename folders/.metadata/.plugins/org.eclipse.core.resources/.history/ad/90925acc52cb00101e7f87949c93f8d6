@@ -1,0 +1,17 @@
+package jdbc;
+
+public class Demo {
+public static void main(String[] args) {
+	String dPath="com.mysql.cj.jdbc.Driver";
+	
+	try {
+		
+		Class.forName(dPath);
+		System.out.println("Driver Loaded");
+		
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+}
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class HomeWorkQuestion {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the max number of classes and Students");
+	
+	int arr[][] = new int[sc.nextInt()][sc.nextInt()];
+	
+	for(int i = 0; i<= arr.length-1; i++) {
+
+		for(int j = 0;  j < arr.length; j++) {
+			System.out.println("the number of classes " + i + " Students " + j);
+			arr[i][j]= sc.nextInt();
+		}
+	}
+	
+	for (int i = 0; i <= arr.length-1; i++ ) {
+		if(i==0) {
+			System.out.println("Class 4");
+		for(int j = 0; j <= 3; j++ ) {
+			System.out.println(arr[i][j]);
+		}
+			}
+		if(i==1) {
+			System.out.println("Class 4");
+			for(int j = 0; j <= 2; j++ ) {
+				System.out.println(arr[i][j]);
+		}
+	}
+		if(i==2) {
+			System.out.println("Class 4");
+			for(int j = 0; j <= 4; j++ ) {
+				System.out.println(arr[i][j]);
+			}
+	}
+		if(i==3) {
+			System.out.println("Class 4");
+			for(int j = 0; j <= 2; j++ ) {
+				System.out.println(arr[i][j]);
+			}
+}
+}
+}
+}
+

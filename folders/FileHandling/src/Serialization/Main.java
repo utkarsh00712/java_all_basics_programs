@@ -1,0 +1,20 @@
+package Serialization;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Main {
+public static void main(String[] args) throws IOException   {
+	Employee employee = new Employee("Omkar", 123, 90000);
+	System.out.println(employee.name +" " + employee.id +" " + employee.salary);
+	
+	String path = "C:\\Kodnest\\Employee.txt";
+	
+	FileOutputStream fos = new FileOutputStream(path);
+	ObjectOutputStream oos = new ObjectOutputStream(fos);
+	
+	oos.writeObject(employee);
+	
+}
+}

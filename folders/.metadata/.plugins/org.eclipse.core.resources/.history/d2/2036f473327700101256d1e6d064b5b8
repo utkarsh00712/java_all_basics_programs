@@ -1,0 +1,18 @@
+package lambdaExpression;
+
+public class calculateApp {
+public static void main(String[] args) {
+	Calculator add = (a,b) -> (a+b);
+	Calculator sub = (a,b) -> (a-b);
+	Calculator mul = (a,b) -> (a*b);
+	Calculator div = (a,b) -> (a/b);
+	
+	System.out.println(add.calculate(5.0,3.0));
+	System.out.println(sub.calculate(15.0,3.0));
+	System.out.println(mul.calculate(15.0,5.0));
+	System.out.println(div.calculate(50.0,5.0));
+	
+	Displayer displayer = (name) -> System.out.println("Hello " + name);
+	displayer.display("Muskan");
+}
+}

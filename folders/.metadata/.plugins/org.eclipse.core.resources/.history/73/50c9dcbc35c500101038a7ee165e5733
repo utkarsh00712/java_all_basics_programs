@@ -1,0 +1,34 @@
+package StreamCreation;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class BufferedReaderExample {
+    public static void main(String[] args) {
+
+        String path1 = "C:\\InputOutput\\input.txt";
+        String path2 = "C:\\InputOutput\\output.txt";
+
+        try (
+            FileReader fr = new FileReader(path1);
+            FileWriter fw = new FileWriter(path2);
+        		
+            BufferedReader br = new BufferedReader(fr);
+            BufferedWriter bw = new BufferedWriter(fw);
+        ) {
+
+            String data;
+
+            while ((data = br.readLine()) != null) {
+                bw.write(data);
+                bw.newLine();  
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+

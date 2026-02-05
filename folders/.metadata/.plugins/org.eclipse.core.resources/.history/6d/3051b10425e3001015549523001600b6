@@ -1,0 +1,119 @@
+package com.kodnest.ems;
+
+import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.internal.build.AllowSysOut;
+
+public class App {
+static SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+    	while(true) {
+       System.out.println("Welcome to EMPLOYEE MANAGEMENT SYSTEM");
+       System.out.println("PRESS 1 -> TO AddEmployee");
+       System.out.println("PRESS 2 -> TO GetEmployee");
+       System.out.println("PRESS 3 -> TO UpdateEmployee");
+       System.out.println("PRESS 4 -> TO DeleteEmployee");
+       System.out.println("PRESS OTHER -> EXIT");
+       int ch = sc.nextInt();
+       
+       switch(ch) {
+       case 1: addEmployee();
+       break;
+       
+       case 2: getEmployee();
+       break;
+       
+       case 3: updateEmployee();
+       break;
+       
+       case 4: deleteEmployee();
+       break;
+       
+       default:
+    	   System.out.println("THANKS FOR USING EMPLOYEE MANAGEMENT SYSTEM");
+    	   factory.close();
+    	   sc.close();
+    	   return;
+       }
+    	}
+    }
+    
+    public static void addEmployee() {
+    	Session session = factory.openSession();
+    	
+    	Transaction transaction = session.beginTransaction();
+    	
+    	System.out.println("Enter the name, salary and Email to add");
+    	
+    	Employee employee = new Employee(sc.next(),sc.nextInt(),sc.next());
+    	
+    	session.persist(employee);
+    	
+    	transaction.commit();
+    	
+    	session.close();
+    }
+    
+    public static void getEmployee() {
+    Session session = factory.openSession();
+    	
+    Transaction transaction = session.beginTransaction();
+    System.out.println("Enter the id to get Employee");
+    int id = sc.nextInt();
+   Employee obj = session.get(Employee.class, id);
+    if(obj!=null) {
+    	System.out.println(obj);
+    } else {
+    System.out.println("Employee with id " + id  + " does not exists");	
+    }
+    transaction.commit();
+    session.close();
+    }
+    
+    public static void deleteEmployee() {
+    	Session session = factory.openSession();
+    	
+        Transaction transaction = session.beginTransaction();
+        System.out.println("Enter the id to update Employee");
+        int id = sc.nextInt();
+       Employee obj = session.get(Employee.class, id);
+        if(obj!=null) {
+        	session.remove(obj);
+        	System.out.println("Employee with id " + id + " is deleted succesfully");
+        } else {
+        System.out.println("Employee with id " + id  + " does not exists");	
+        }
+        transaction.commit();
+        session.close();
+        }
+    
+    
+    public static void updateEmployee() {
+Session session = factory.openSession();
+    	
+        Transaction transaction = session.beginTransaction();
+        System.out.println("Enter the id to get Employee");
+        int id = sc.nextInt();
+       Employee obj = session.get(Employee.class, id);
+        if(obj!=null) {
+        	System.out.println("Enter name, salary and EMAIL to be updated");
+        	String name = sc.next();
+        	int salary = sc.nextInt();
+        	String email = sc.next();
+        	
+        	obj.setName(name);
+        	obj.setSalary(salary);
+        	obj.setEmail(email);
+        	session.persist(obj);
+        } else {
+        System.out.println("Employee with id " + id  + " does not exists");	
+        }
+        transaction.commit();
+        session.close();
+    }
+}

@@ -1,0 +1,4 @@
+spring.application.name=FifthSpring
+dept.id = 123
+dept.name = IT
+dept.location = BENGALURU

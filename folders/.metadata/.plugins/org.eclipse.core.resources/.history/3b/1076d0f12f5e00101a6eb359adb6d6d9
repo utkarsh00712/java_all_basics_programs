@@ -1,0 +1,21 @@
+package com.utk.num.manipulation;
+
+public class cube {
+public static void main(String[] args) {
+	int a = 1;
+	int b = 5;
+	numbercube num = new numbercube();
+	int res = num.printcube(a,b);
+	System.out.println(res);
+}
+}
+class numbercube{
+	public int printcube(int a,int b) {
+		int cube = 0;
+		for(int i= a; i <= b; i++) {
+			cube = cube+(i*i*i);
+		}
+		return cube;
+		
+	}
+}

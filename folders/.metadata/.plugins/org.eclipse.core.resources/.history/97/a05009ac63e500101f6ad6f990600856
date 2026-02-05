@@ -1,0 +1,52 @@
+package com.kodnest.FourthSpring;
+
+public class Employee {
+int id = 101;
+String name = "Utkarsh"; 
+Department dept;
+
+void work() {
+	dept.work();
+}
+
+@Override
+public String toString() {
+	return  "name=" + name + ", dept=" + dept + "]";
+}
+
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public Department getDept() {
+	return dept;
+}
+
+public void setDept(Department dept) {
+	this.dept = dept;
+}
+
+public Employee(Department dept) {
+	super();
+	dept.work();
+}
+
+public Employee(int id, String name, Department dept) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.dept = dept;
+}
+}

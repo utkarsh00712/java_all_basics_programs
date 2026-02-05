@@ -1,0 +1,51 @@
+
+final public class Array {
+private int arr[];
+private int size;
+
+public Array(int size) {
+	arr = new int[size];
+	this.size = size;
+}
+
+public void insert(int elem, int index) {
+	if(index >=0 && index <= arr.length-1) {
+		arr[index] = elem;
+	} else {
+		System.out.println("index out of boundary between 0 to " + (arr.length-1));
+	}
+}
+
+public void insertAll(int elem) {
+	for(int i = 0; i <= arr.length-1; i++) {
+		arr[i]= elem;
+	}
+}
+
+public void display() {
+	System.out.print("[");
+	for(int i = 0; i <= arr.length-1; i++) {
+		System.out.print(arr[i]);
+		if(i != arr.length-1) {
+			System.out.print(" , ");
+		}
+	}  System.out.println("]");
+}
+
+public boolean search(int key) {
+	for(int i = 0; i <= arr.length-1; i++) {
+		if(arr[i] == key) {
+			return true;
+		} 
+		
+	}
+	return false;
+}
+
+public void delete(int index) {
+	if(index >= 0 && index <= arr.length-1) {
+		System.out.println("Element deleted is " + arr[index]);
+		arr[index] = 0;
+	}
+}
+}

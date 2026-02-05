@@ -1,0 +1,55 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Demo {
+public static void main(String[] args) {
+	String dPath="com.mysql.cj.jdbc.Driver";
+	String url = "jdbc:mysql://localhost:3306/kodnest";
+	String user = "root";
+	String password = "utkarsh@123";
+	Connection con = null;
+	Statement stmt = null;
+	String sql = "select * from kodnest.id";
+	ResultSet rs = null;
+	try {
+		// Step 1 -> Loading the Driver
+		Class.forName(dPath);
+		System.out.println("Driver Loaded");
+		
+		// Step 2 -> Establish the connection
+		 con =  DriverManager.getConnection(url, user, password);
+		 System.out.println("Connection Established");
+		 
+		 // Step 3 -> Create the medium
+		  stmt = con.createStatement();
+		  System.out.println("Statement Created");
+		  
+		 // Step 4 -> Query
+		  rs = stmt.executeQuery(sql);
+		  System.out.println("Query Executed");
+		  
+		  // Step 5 -> Display the result (data)
+		  while(rs.next()) {
+			  System.out.println(rs.getInt(1) +" " + rs.getString(2) +" " + rs.getInt(3) +" " + rs.getString(4));
+		  }
+		
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+	
+	finally {
+		try {
+			con.close();
+			stmt.close();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
+}

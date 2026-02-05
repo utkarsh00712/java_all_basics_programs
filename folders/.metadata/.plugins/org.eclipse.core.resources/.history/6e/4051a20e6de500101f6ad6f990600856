@@ -1,0 +1,6 @@
+spring.application.name=FifthSpring
+dept.id = 123
+dept.name = IT
+dept.location = BENGALURU
+Employee.id = 12
+Employee.name = Utkarsh
