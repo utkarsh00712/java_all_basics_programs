@@ -5,7 +5,6 @@ on:
     - cron: "0 5 * * *"   # 10:30 AM IST (05:00 UTC)
   workflow_dispatch:
 
-# ✅ REQUIRED to allow git push
 permissions:
   contents: write
 
@@ -23,10 +22,15 @@ jobs:
         run: |
           echo "Checking folders..."
 
-          FOLDER=$(find folders -mindepth 1 -maxdepth 1 -type d | sort | head -n 1 | xargs basename)
+          if [ ! -d "folders" ]; then
+            echo "No 'folders' directory found. Exiting."
+            exit 0
+          fi
+
+          FOLDER=$(ls folders | head -n 1)
 
           if [ -z "$FOLDER" ]; then
-            echo "✅ No folders left"
+            echo "No folders left to upload."
             exit 0
           fi
 
@@ -39,5 +43,5 @@ jobs:
           git config user.email "chaturvediutkarsh776@gmail.com"
 
           git add .
-          git commit -m "Daily folder upload: $FOLDER"
+          git commit -m "Daily folder upload: $FOLDER" || echo "No changes to commit"
           git push
